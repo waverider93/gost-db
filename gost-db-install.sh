@@ -6,6 +6,7 @@ ALTER USER postgres WITH PASSWORD 'postgres';
 CREATE DATABASE gost OWNER postgres;
 \connect gost
 CREATE EXTENSION postgis;
+\i gost_init_db.sql
 \q
 EOF
 
