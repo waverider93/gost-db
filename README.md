@@ -2,9 +2,14 @@
 
 GOST repository containing database initializion sql script and shell install script
 
+# SQL script
+
+Run https://github.com/Geodan/gost-db/blob/master/gost_init_db.sql sql script in a new GOST database,
+default user/password: postgres/postgres
+
 # Shell script
 
-Run (gost-db-install.sh) to installl the GOST database from terminal.
+Run (gost-db-install.sh) to installl PostgreSQL + PostGIS + GOST database from terminal.
 
 ```
 $ wget https://raw.githubusercontent.com/Geodan/gost-db/master/gost-db-install.sh
