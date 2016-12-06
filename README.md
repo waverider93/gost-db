@@ -4,7 +4,7 @@ GOST repository containing database initializion sql script and shell install sc
 
 # Shell script
 
-Run [gost-db-install.sh] to installl the GOST database from terminal.
+Run (gost-db-install.sh) to installl the GOST database from terminal.
 
 # Docker
 
