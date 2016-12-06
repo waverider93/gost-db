@@ -30,8 +30,7 @@ GOST schema is in schema postgres.v1
 ### Building GOST-db image
 
 ```
-. $ docker build -t geodan/gost-db .
-
-. $ docker push geodan/gost-db
+$ docker build -t geodan/gost-db .
+$ docker push geodan/gost-db
 ```
 
