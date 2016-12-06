@@ -1,10 +1,10 @@
 # GOST-DB
 
-GOST repository containing database initialization sql scriptm shell install script and Docker commands.
+GOST repository containing database initialization sql script, shell install script and some Docker commands.
 
 GOST schema is by default in schema gost.v1
 
-Connect in pgadmin with localhost:5432 postgres/postgres
+Testcase: Connect in pgadmin with localhost:5432 postgres/postgres, GOST database should be in gost.v1
 
 # SQL script
 
