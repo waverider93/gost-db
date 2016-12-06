@@ -2,6 +2,10 @@
 
 GOST repository containing database initialization sql scriptm shell install script and Docker commands.
 
+GOST schema is by default in schema gost.v1
+
+Connect in pgadmin with localhost:5432 postgres/postgres
+
 # SQL script
 
 Run https://github.com/Geodan/gost-db/blob/master/gost_init_db.sql sql script in a new GOST database,
@@ -26,11 +30,6 @@ Public image: [https://hub.docker.com/r/geodan/gost-db/]
 ```
 $ docker run -p 5432:5432 -e POSTGRES_DB=gost geodan/gost-db
 ```
-
-Connect in pgadmin with localhost:5432 postgres/postgres
-
-GOST schema is in schema postgres.v1
-
 
 ### Building GOST-db image
 
