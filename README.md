@@ -1,6 +1,6 @@
 # GOST-DB
 
-GOST repository containing database initialization sql script and shell install script
+GOST repository containing database initialization sql scriptm shell install script and Docker commands.
 
 # SQL script
 
