@@ -1,4 +1,4 @@
-### gost-db
+### GOST-DB
 
 GOST repository containing database initializion sql script
 
