@@ -8,5 +8,3 @@ CREATE EXTENSION postgis;
 \i gost_init_db.sql
 \q
 EOF
-
-# todo: run sql script
