@@ -123,7 +123,7 @@ CREATE TABLE sensor
   name character varying(255),
   description character varying(500),
   encodingtype integer,
-  metadata character varying(255),
+  metadata text,
   CONSTRAINT sensor_pkey PRIMARY KEY (id)
 )
 WITH (
