@@ -1,5 +1,5 @@
 CREATE SCHEMA v1;
-SET search_path = v1;
+SET search_path = v1, public;
 
 CREATE TABLE featureofinterest
 (
@@ -7,7 +7,7 @@ CREATE TABLE featureofinterest
   name character varying(255),
   description character varying(500),
   encodingtype integer,
-  feature public.geometry(geometry,4326),
+  feature geometry(geometry,4326),
   original_location_id bigint,
   CONSTRAINT featureofinterest_pkey PRIMARY KEY (id)
 )
