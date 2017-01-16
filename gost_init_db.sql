@@ -1,3 +1,4 @@
+CREATE EXTENSION postgis;
 CREATE SCHEMA v1;
 SET search_path = v1, public;
 
