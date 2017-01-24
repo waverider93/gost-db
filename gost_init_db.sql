@@ -194,7 +194,7 @@ CREATE SEQUENCE observations_id_seq
 	NO MAXVALUE
 	CACHE 1;
 
-CREATE UNLOGGED TABLE observation
+CREATE TABLE observation
 (
   id bigint NOT NULL DEFAULT nextval('observations_id_seq'::regclass),
   data jsonb,
