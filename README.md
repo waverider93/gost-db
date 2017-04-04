@@ -38,3 +38,12 @@ $ docker build -t geodan/gost-db .
 $ docker push geodan/gost-db
 ```
 
+### Building GOST-db image
+
+```
+$ docker build -f rpi-Dockerfile -t geodan/rpi-gost-db .
+$ docker push geodan/rpi-gost-db
+```
+
+
+
