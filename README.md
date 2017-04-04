@@ -6,12 +6,12 @@ GOST schema is by default in schema gost.v1
 
 Testcase: Connect in pgadmin with localhost:5432 postgres/postgres, GOST database should be in gost.v1
 
-# SQL script
+### SQL script
 
 Run https://github.com/Geodan/gost-db/blob/master/gost_init_db.sql sql script in a new GOST database,
 default user/password: postgres/postgres
 
-# Shell script
+### Shell script
 
 Run (gost-db-install.sh) to installl PostgreSQL + PostGIS + GOST database from terminal.
 
@@ -20,10 +20,11 @@ $ wget https://raw.githubusercontent.com/Geodan/gost-db/master/gost-db-install.s
 $ sh gost-db-install.sh
 ```
 
-# Docker
+### Docker
 
 Public image: [https://hub.docker.com/r/geodan/gost-db/]
 
+Public image Raspberry Pi: [https://hub.docker.com/r/geodan/rpi-gost-db/]
 
 ### Running GOST database
 
