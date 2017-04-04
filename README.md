@@ -31,14 +31,21 @@ Public image: [https://hub.docker.com/r/geodan/gost-db/]
 $ docker run -p 5432:5432 -e POSTGRES_DB=gost geodan/gost-db
 ```
 
-### Building GOST-db image
+### Running GOST database on Raspberry Pi
+
+```
+$ docker run -p 5432:5432 -e POSTGRES_DB=gost geodan/rpi-gost-db
+```
+
+
+### Building gost-db image
 
 ```
 $ docker build -t geodan/gost-db .
 $ docker push geodan/gost-db
 ```
 
-### Building GOST-db image
+### Building rpi-gost-db image
 
 ```
 $ docker build -f rpi-Dockerfile -t geodan/rpi-gost-db .
