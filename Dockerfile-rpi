@@ -1,0 +1,2 @@
+FROM tobi312/rpi-postgresql-postgis
+ADD gost_init_db.sql /docker-entrypoint-initdb.d/
