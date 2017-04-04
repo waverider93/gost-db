@@ -45,7 +45,7 @@ $ docker build -t geodan/gost-db .
 $ docker push geodan/gost-db
 ```
 
-### Building rpi-gost-db image
+### Building rpi-gost-db image for Raspberry Pi
 
 ```
 $ docker build -f rpi-Dockerfile -t geodan/rpi-gost-db .
