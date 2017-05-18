@@ -8,7 +8,7 @@ Testcase: Connect in pgadmin with localhost:5432 postgres/postgres, GOST databas
 
 ### SQL script
 
-Run https://github.com/Geodan/gost-db/blob/master/gost_init_db.sql sql script in a new GOST database,
+Run https://github.com/gost/gost-db/blob/master/gost_init_db.sql sql script in a new GOST database,
 default user/password: postgres/postgres
 
 ### Shell script
