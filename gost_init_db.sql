@@ -8,6 +8,7 @@ CREATE TABLE featureofinterest
   name character varying(255),
   description character varying(500),
   encodingtype integer,
+  geojson jsonb,
   feature geometry(geometry,4326),
   original_location_id bigint,
   CONSTRAINT featureofinterest_pkey PRIMARY KEY (id)
@@ -34,6 +35,7 @@ CREATE TABLE location
   name character varying(255),
   description character varying(500),
   encodingtype integer,
+  geojson jsonb,
   location public.geometry(geometry,4326),
   CONSTRAINT location_pkey PRIMARY KEY (id)
 )
@@ -143,7 +145,6 @@ WITH (
   OIDS=FALSE
 );
 
-
 CREATE TABLE datastream
 (
   id bigserial NOT NULL,
@@ -192,8 +193,7 @@ CREATE TABLE observation
   id bigserial NOT NULL,
   data jsonb,
   stream_id bigint,
-  featureofinterest_id bigint,
-  CONSTRAINT observation_pkey PRIMARY KEY (id),
+  featureofinterest_id bigint,  
   CONSTRAINT fk_datastream FOREIGN KEY (stream_id)
       REFERENCES datastream (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE CASCADE,
@@ -205,15 +205,15 @@ WITH (
   OIDS=FALSE
 );
 
-CREATE INDEX fki_datastream
-  ON observation
-  USING btree
-  (stream_id);
-
 CREATE INDEX fki_featureofinterest
   ON observation
   USING btree
   (featureofinterest_id);
+
+CREATE INDEX i_dsid_id
+  ON v1.observation
+  USING btree
+  (stream_id, id);
 
 CREATE INDEX fki_thing_hl
   ON historicallocation
