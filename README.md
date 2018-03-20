@@ -53,5 +53,20 @@ $ docker build -f Dockerfile-rpi -t geodan/rpi-gost-db .
 $ docker push geodan/rpi-gost-db
 ```
 
+## Database tuning
+
+The database is tuned in the postgresql.conf files, changes:
+
+shared_buffers -> 512MB (from 128MB)
+
+work_mem -> 16MB (from 1 MB)
+
+synchronous_commit -> off (from 'on')
+ 
+wal_buffers -> 16MB (from ?)
+
+wal_writer_delay -> 1000ms (from 200 ms)
+
+checkpoint_timeout -> 15min (from 5min)
 
 
