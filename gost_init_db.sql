@@ -210,6 +210,11 @@ CREATE INDEX fki_featureofinterest
   USING btree
   (featureofinterest_id);
 
+CREATE INDEX i_id
+  ON v1.observation
+  USING btree
+  (id);
+
 CREATE INDEX i_dsid_id
   ON v1.observation
   USING btree
