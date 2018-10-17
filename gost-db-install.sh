@@ -1,4 +1,4 @@
-# for Ubuntu 16.04, PostgreSQL 9.5
+# script for creating databasefor Ubuntu 16.04, PostgreSQL 9.5 (without docker)
 sudo apt-get -y install postgresql postgresql-contrib postgis wget
 wget https://raw.githubusercontent.com/gost/gost-db/master/gost_init_db.sql
 /etc/init.d/postgresql start
