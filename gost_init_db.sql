@@ -1,4 +1,5 @@
 CREATE EXTENSION postgis;
+CREATE EXTENSION timescaledb;
 CREATE SCHEMA v1;
 SET search_path = v1, public;
 
@@ -191,7 +192,11 @@ CREATE INDEX fki_thing
 CREATE TABLE observation
 (
   id bigserial NOT NULL,
-  data jsonb,
+  phenomenonTime_start TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+  phenomenonTime_end TIMESTAMP WITHOUT TIME ZONE,
+  resultTime TIMESTAMP WITHOUT TIME ZONE,
+  validTime_start TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+  validTime_end TIMESTAMP WITHOUT TIME ZONE NOT NULL,
   stream_id bigint,
   featureofinterest_id bigint,  
   CONSTRAINT fk_datastream FOREIGN KEY (stream_id)
@@ -204,6 +209,10 @@ CREATE TABLE observation
 WITH (
   OIDS=FALSE
 );
+
+SELECT create_hypertable('observation', 'phenomenontime_start',
+    chunk_time_interval => interval '1 day');
+
 
 CREATE INDEX fki_featureofinterest
   ON observation

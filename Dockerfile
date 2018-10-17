@@ -1,4 +1,4 @@
-FROM mdillon/postgis:10-alpine
+FROM timescale/timescaledb-postgis:latest-pg10
 ADD gost_init_db.sql /docker-entrypoint-initdb.d/
 ADD entry.sh /docker-entrypoint-initdb.d/
 ADD postgresql.conf /etc/postgresql/conf/postgresql.conf
