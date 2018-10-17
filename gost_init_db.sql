@@ -194,10 +194,7 @@ CREATE TABLE observation
   id bigserial NOT NULL,
   phenomenonTime_start TIMESTAMP WITHOUT TIME ZONE NOT NULL,
   phenomenonTime_end TIMESTAMP WITHOUT TIME ZONE,
-  resultTime TIMESTAMP WITHOUT TIME ZONE,
-  validTime_start TIMESTAMP WITHOUT TIME ZONE,
-  validTime_end TIMESTAMP WITHOUT TIME ZONE,
-  result jsonb,
+  data jsonb,
   stream_id bigint,
   featureofinterest_id bigint,  
   CONSTRAINT fk_datastream FOREIGN KEY (stream_id)
