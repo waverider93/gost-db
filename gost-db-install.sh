@@ -1,6 +1,7 @@
 # for Ubuntu 16.04, PostgreSQL 9.5
 sudo apt-get -y install postgresql postgresql-contrib postgis wget
 /etc/init.d/postgresql start
+wget https://raw.githubusercontent.com/gost/gost-db/master/gost_init_db.sql
 sudo su postgres -c psql << EOF
 ALTER USER postgres WITH PASSWORD 'postgres';
 CREATE DATABASE gost OWNER postgres;
