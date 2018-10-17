@@ -197,6 +197,7 @@ CREATE TABLE observation
   resultTime TIMESTAMP WITHOUT TIME ZONE,
   validTime_start TIMESTAMP WITHOUT TIME ZONE NOT NULL,
   validTime_end TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+  result jsonb,
   stream_id bigint,
   featureofinterest_id bigint,  
   CONSTRAINT fk_datastream FOREIGN KEY (stream_id)
