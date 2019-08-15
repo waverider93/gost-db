@@ -1,5 +1,4 @@
 CREATE EXTENSION postgis;
-CREATE EXTENSION timescaledb;
 CREATE SCHEMA v1;
 SET search_path = v1, public;
 
