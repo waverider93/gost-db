@@ -191,9 +191,13 @@ CREATE INDEX fki_thing
 CREATE TABLE observation
 (
   id bigserial NOT NULL,
-  phenomenonTime_start TIMESTAMP WITHOUT TIME ZONE NOT NULL,
-  phenomenonTime_end TIMESTAMP WITHOUT TIME ZONE,
-  data jsonb,
+  phenomenontimestart TIMESTAMP WITH TIME ZONE NOT NULL,
+  phenomenontimeend TIMESTAMP WITH TIME ZONE,
+  resulttime TIMESTAMP WITH TIME ZONE,
+  validtime tstzrange,
+  resultquality character varying(50),
+  result jsonb,
+  parameters jsonb,
   stream_id bigint,
   featureofinterest_id bigint,  
   CONSTRAINT fk_datastream FOREIGN KEY (stream_id)
@@ -207,7 +211,7 @@ WITH (
   OIDS=FALSE
 );
 
-SELECT create_hypertable('observation', 'phenomenontime_start',
+SELECT create_hypertable('observation', 'phenomenontimestart',
     chunk_time_interval => interval '1 day');
 
 
