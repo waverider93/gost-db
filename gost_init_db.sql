@@ -196,7 +196,7 @@ CREATE TABLE observation
   resulttime TIMESTAMP WITH TIME ZONE,
   validtime tstzrange,
   resultquality character varying(50),
-  result jsonb,
+  data jsonb,
   parameters jsonb,
   stream_id bigint,
   featureofinterest_id bigint,  
